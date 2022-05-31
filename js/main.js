@@ -1,5 +1,3 @@
-console.log("Vi er in main JS");
-
 //URL for fetching
 const fetchTeamsUrl = 'http://localhost:8080/teams';
 const fetchRidersUrl = 'http://localhost:8080/riders';
@@ -45,6 +43,7 @@ async function createRidersTable() {
       </tr>`;
 
   for (let i = 0; i < riderData.length; i++) {
+
     //Converts to more readable time on the frontend
     displayTime = riderData[i].time;
     displayTime = displayTime.toString();
@@ -106,6 +105,7 @@ async function tableAddRow() {
   await createRidersTable();
 
 }
+
 //Edit row from frontend table and database
 async function tableEditRow(number) {
 
@@ -134,6 +134,7 @@ async function tableEditRow(number) {
   sprintPoint.innerHTML = "<input type='number' id='sprintPoint_text" + number + "' value='" + sprintPoint_data + "'>";
 
 }
+
 //Put and Edit frontend table and database
 async function tableSaveRow(number) {
   console.log(number);

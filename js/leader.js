@@ -1,5 +1,3 @@
-console.log("We are in leader");
-
 const fetchRidersByTime = 'http://localhost:8080/riders/orderbytime';
 
 function fetchData1(url) {
@@ -8,12 +6,7 @@ function fetchData1(url) {
 
 async function createLeaderTable() {
 
-   console.log("Leadertable")
     const riderData = await fetchData1(fetchRidersByTime);
-
-    const points = riderData;
-    points.sort(function(a, b){return a - b});
-    console.log(points);
 
     let leaderTableBody = document.getElementById("leader-table");
 
@@ -29,6 +22,7 @@ async function createLeaderTable() {
       </tr>`;
 
     for (let i = 0; i < riderData.length; i++) {
+
       //Converts to more readable time on the frontend
       displayTime = riderData[i].time;
       displayTime = displayTime.toString();
