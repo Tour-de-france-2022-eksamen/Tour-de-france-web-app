@@ -34,14 +34,14 @@ async function createRidersTable() {
 
   riderTableBody.innerHTML = "";
   riderTableBody.innerHTML += `<tr>
-        <th>Nr.</th>
+        <th>RiderNr.</th>
         <th>Name</th>
         <th>Team</th>
         <th>Nationality</th>
         <th>Total time</th>
         <th>Sprint Points</th>
         <th>Mountain Points</th>
-        <th>&nbspEdit&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSave&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspDelete</th>
+        <th>&nbspEdit&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSave&nbsp&nbsp&nbspDelete</th>
       </tr>`;
 
   for (let i = 0; i < riderData.length; i++) {
